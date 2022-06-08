@@ -1,0 +1,40 @@
+<!--Elements that are not listed, are loaded like Actors if they extend Actor-->
+<Stage posx="Your Value" posy="Your Value" width="Your Value" height="Your Value">
+    <!--onLoad: @see UiXmlLoader.OnLoadMethod-->
+    <Actor name="Your ID" width="Your Value" height="Your Value" posx="Your Value" posy="Your Value" scale="Your Value"
+           scaleX="Your Value" scaleY="Your Value" rotation="Your Value" visible="Your Boolean"
+           touchable="Your Touchable" onLoad="Your Class" styleName="Your StyleName" args="key1=value1;key2=value2"/>
+    <!--@see Actor for other Attributes-->
+    <Chart columns="Your Value" fillParent="Your Boolean" useBackgrounds="Your Boolean">
+        <!--Actors/Items-->
+        <Actor/>
+        <Actor/>
+    </Chart>
+    <!--Does not contain right constructor use XmlLabel instead!-->
+    <Label align="Your Align"/>
+    <!--@see Chart for more information-->
+    <LabelChart/>
+    <!--No attributes allowed-->
+    <Tab>
+        <Button/>
+        <Table/>
+    </Tab>
+    <!--@see Actor for other Attributes-->
+    <TabbedTable buttonsHeight="Your Value" maxButtonWidth="Your Value">
+        <!--@see Tab for more Information-->
+        <Tab/>
+        <Tab/>
+    </TabbedTable>
+    <!--@see Actor for other Attributes-->
+    <Table fillParent="Your Boolean">
+        <!--Actors/Items-->
+        <Actor/>
+        <Actor/>
+    </Table>
+    <!--Does not contain right constructor use XmlTextButton instead!-->
+    <TextButton/>
+    <!--@see Actor for other Attributes-->
+    <XmlLabel align="Your Align"/>
+    <!--Loaded like an Actor-->
+    <XmlTextButton args="text=Your Text"/>
+</Stage>
