@@ -1,11 +1,12 @@
 <!--Elements that are not listed, are loaded like Actors if they extend Actor-->
 <Stage posx="Your Value" posy="Your Value" width="Your Value" height="Your Value">
-    <!--onLoad: @see UiXmlLoader.OnLoadMethod-->
+    <!--onLoad: Add package of your class to the UiXmlLoader or put the complete classpath.
+        Annotate your onLoad-Method as XmlOnLoadMethod and put the name of the element.-->
     <Actor name="Your ID" width="Your Value" height="Your Value" posx="Your Value" posy="Your Value" scale="Your Value"
            scaleX="Your Value" scaleY="Your Value" rotation="Your Value" visible="Your Boolean"
-           touchable="Your Touchable" onLoad="Your Class" styleName="Your StyleName" args="key1=value1;key2=value2"/>
+           touchable="Your Touchable" onLoad="Example" styleName="Your StyleName" args="key1=value1;key2=value2"/>
     <!--@see Actor for other Attributes-->
-    <Chart columns="Your Value" fillParent="Your Boolean" useBackgrounds="Your Boolean">
+    <Chart name="chart" columns="Your Value" fillParent="Your Boolean" useBackgrounds="Your Boolean" onLoad="de.maxiindiestyle.api.ui.xml.Example">
         <!--Actors/Items-->
         <Actor/>
         <Actor/>
@@ -37,4 +38,18 @@
     <XmlLabel align="Your Align"/>
     <!--Loaded like an Actor-->
     <XmlTextButton args="text=Your Text"/>
+    <!--Include another xml file. It cannot start with a stage. Just put it in as it would be in this file.-->
+    <!--<Table>...other Code...<Table/>-->
+    <include src="yourFile.xml"/>
+    <!--Replace given strings in your xml file when including-->
+    <include src="yourFile.xml" replace="tag=replaceText"/>
+    <TabbedTable>
+        <!--It is also possible to use Arrays, then the file will be included multiple times.
+            The first include replaces all 'tag' with 'replaceText2', the second with 'replaceText2'.
+            This includes two Tabs for example.-->
+        <include src="yourFile.xml" replace="tag=[replaceText1, replaceText2]"/>
+    </TabbedTable>
+    <!--Get your value or array from a Class method.
+        Don't forget to annotate your static method which returns an ArrayList<String> with @XmlVarargsPreprocessor.Varargs-->
+    <include src="yourFile.xml" replace="tag=@your.package.Class\>"/>
 </Stage>
