@@ -32,3 +32,4 @@ turns into
   <include src="tab.xml" replace="tabName=Tab_2"/>
   <include src="tab.xml" replace="tabName=Tab_3"/>
   ```
+
