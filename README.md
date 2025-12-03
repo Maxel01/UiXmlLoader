@@ -1,5 +1,5 @@
 # UiXmlLoader
-An UiLoader that loads xml files to LibGdx stages.
+A UiLoader that loads xml files to LibGdx stages.
 
 The Uiloader can be used to create layouts in xml files instead of hardcoding it in Java-Classes.
 Each element provides an onLoad method to manipulate or insert data. Inside the Onload-Method it is possible to access the element via its name and cast it to an Actor.
